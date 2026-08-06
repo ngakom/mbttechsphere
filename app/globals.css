@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1c2126;
+  --navy-panel: #262c33;
+  --navy-panel-light: #323a43;
+  --maroon: #5c1a41;
+  --maroon-light: #8c2f63;
+  --gold: #c2984a;
+  --white: #ffffff;
+  --grey-light: #f7f5f2;
+  --text-grey: #d3cdd2;
+  --ink: #1c2126;
+  --slate: #58515b;
+  --hairline-light: rgba(28, 33, 38, 0.08);
+  --hairline-dark: rgba(211, 205, 210, 0.14);
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-panel: var(--navy-panel);
+  --color-navy-panel-light: var(--navy-panel-light);
+  --color-maroon: var(--maroon);
+  --color-maroon-light: var(--maroon-light);
+  --color-gold: var(--gold);
+  --color-grey-light: var(--grey-light);
+  --color-text-grey: var(--text-grey);
+  --color-ink: var(--ink);
+  --color-slate: var(--slate);
+  --color-hairline-light: var(--hairline-light);
+  --color-hairline-dark: var(--hairline-dark);
+  --font-heading: var(--font-poppins);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-sans), "Segoe UI", Arial, sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-heading), "Segoe UI", system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+.tracking-widest-sm {
+  letter-spacing: 0.16em;
+}
+
+/* Hero + dark-band ambient glow */
+.glow-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.55;
+}
+
+/* Cards */
+.card-light {
+  background: var(--white);
+  border: 1px solid var(--hairline-light);
+  box-shadow: 0 12px 32px rgba(28, 33, 38, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.card-light:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(28, 33, 38, 0.12);
+  border-color: rgba(92, 26, 65, 0.25);
+}
+
+.card-dark {
+  background: linear-gradient(180deg, var(--navy-panel) 0%, var(--navy) 100%);
+  border: 1px solid var(--hairline-dark);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-dark:hover {
+  transform: translateY(-8px);
+  border-color: rgba(194, 152, 74, 0.4);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+.btn-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-lift:hover {
+  transform: translateY(-2px);
+}
+
+.btn-lift:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* Marquee for trusted-tech strip */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 32s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hero visualization motion */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.float-slow {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+.float-slower {
+  animation: float-y 8s ease-in-out infinite;
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -200;
+  }
+}
+
+.dash-flow {
+  stroke-dasharray: 6 8;
+  animation: dash-flow 6s linear infinite;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+}
+
+.pulse-soft {
+  animation: pulse-soft 2.6s ease-in-out infinite;
+}
+
+@keyframes rise-bar {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.rise-bar {
+  transform-origin: bottom;
+  animation: rise-bar 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
