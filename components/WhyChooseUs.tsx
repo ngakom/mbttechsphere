@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
   return (
     <section id="why-us" className="relative overflow-hidden bg-navy py-24 lg:py-32">
       <div className="glow-field">
-        <div className="glow-orb left-1/4 top-0 h-80 w-80 bg-maroon/30" />
+        <div className="glow-orb left-1/4 top-0 h-80 w-80 bg-accent/30" />
         <div className="glow-orb bottom-0 right-1/4 h-80 w-80 bg-gold/20" />
       </div>
 
@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
             About us
           </span>
           <h2 className="font-heading mt-4 text-3xl font-bold text-white sm:text-4xl">
-            Why Choose MM Digital Solutions
+            Why Choose MBT TechSphere Solutions
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-grey">
             A senior team that has shipped Power Platform, SharePoint and AI solutions across

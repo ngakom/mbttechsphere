@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MM Digital Solutions | Intelligent Digital Solutions for Business",
+  title: "MBT TechSphere Solutions | Intelligent Digital Solutions for Business",
   description:
-    "MM Digital Solutions helps organizations automate processes, build business applications, create insightful dashboards, and modernize digital workplaces using Microsoft Power Platform, SharePoint, Power BI and AI.",
+    "MBT TechSphere Solutions helps organizations automate processes, build business applications, create insightful dashboards, and modernize digital workplaces using Microsoft Power Platform, SharePoint, Power BI and AI.",
 };
 
 export default function RootLayout({

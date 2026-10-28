@@ -7,9 +7,9 @@ export default function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden bg-navy pt-28 pb-20"
     >
       <div className="glow-field">
-        <div className="glow-orb -left-32 top-0 h-[420px] w-[420px] bg-maroon/50" />
+        <div className="glow-orb -left-32 top-0 h-[420px] w-[420px] bg-accent/50" />
         <div className="glow-orb right-0 top-1/3 h-[480px] w-[480px] bg-gold/20" />
-        <div className="glow-orb bottom-0 left-1/3 h-[360px] w-[360px] bg-maroon-light/25" />
+        <div className="glow-orb bottom-0 left-1/3 h-[360px] w-[360px] bg-accent-light/25" />
       </div>
       <div
         className="absolute inset-0 opacity-[0.07]"
@@ -27,7 +27,7 @@ export default function Hero() {
           </span>
           <h1 className="font-heading mt-6 text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]">
             Transforming Businesses Through{" "}
-            <span className="bg-gradient-to-r from-gold to-maroon-light bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-gold to-accent-light bg-clip-text text-transparent">
               Intelligent Digital Solutions
             </span>
           </h1>
@@ -39,7 +39,7 @@ export default function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#contact"
-              className="btn-lift rounded-full bg-maroon px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(92,26,65,0.45)] hover:bg-maroon-light"
+              className="btn-lift rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(200,100,47,0.45)] hover:bg-accent-light"
             >
               Book a Consultation
             </a>

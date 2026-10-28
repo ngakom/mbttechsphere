@@ -4,9 +4,9 @@ import BlogCard from "@/components/BlogCard";
 import { posts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Insights | MM Digital Solutions",
+  title: "Insights | MBT TechSphere Solutions",
   description:
-    "Practical guidance on Power Platform, SharePoint, Power BI and AI from the MM Digital Solutions team.",
+    "Practical guidance on Power Platform, SharePoint, Power BI and AI from the MBT TechSphere Solutions team.",
 };
 
 export default function BlogIndex() {
@@ -14,7 +14,7 @@ export default function BlogIndex() {
     <>
       <section className="relative overflow-hidden bg-navy pb-20 pt-36">
         <div className="glow-field">
-          <div className="glow-orb -left-24 top-0 h-80 w-80 bg-maroon/40" />
+          <div className="glow-orb -left-24 top-0 h-80 w-80 bg-accent/40" />
           <div className="glow-orb right-0 bottom-0 h-72 w-72 bg-gold/20" />
         </div>
         <div className="relative mx-auto max-w-4xl px-6 text-center lg:px-10">

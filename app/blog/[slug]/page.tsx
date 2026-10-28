@@ -16,9 +16,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
-  if (!post) return { title: "Article not found | MM Digital Solutions" };
+  if (!post) return { title: "Article not found | MBT TechSphere Solutions" };
   return {
-    title: `${post.title} | MM Digital Solutions`,
+    title: `${post.title} | MBT TechSphere Solutions`,
     description: post.excerpt,
   };
 }
@@ -38,7 +38,7 @@ export default async function BlogPost({
     <>
       <section className="relative overflow-hidden bg-navy pb-16 pt-36">
         <div className="glow-field">
-          <div className="glow-orb -left-24 top-0 h-72 w-72 bg-maroon/40" />
+          <div className="glow-orb -left-24 top-0 h-72 w-72 bg-accent/40" />
         </div>
         <div className="relative mx-auto max-w-3xl px-6 lg:px-10">
           <Reveal>
@@ -79,7 +79,7 @@ export default async function BlogPost({
                 <ul key={i} className="mt-4 space-y-2.5">
                   {block.items.map((item, j) => (
                     <li key={j} className="flex gap-3 text-[15px] leading-relaxed text-slate">
-                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-maroon" />
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                       {item}
                     </li>
                   ))}
@@ -103,7 +103,7 @@ export default async function BlogPost({
             </p>
             <Link
               href="/#contact"
-              className="btn-lift mt-5 inline-block rounded-full bg-maroon px-6 py-3 text-sm font-semibold text-white hover:bg-maroon-light"
+              className="btn-lift mt-5 inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-light"
             >
               Book a Consultation
             </Link>

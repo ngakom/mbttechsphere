@@ -68,7 +68,7 @@ export default function Services() {
     <section id="services" className="bg-grey-light py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest-sm text-maroon">
+          <span className="text-xs font-semibold uppercase tracking-widest-sm text-accent">
             What we do
           </span>
           <h2 className="font-heading mt-4 text-3xl font-bold text-ink sm:text-4xl">
@@ -84,7 +84,7 @@ export default function Services() {
           {SERVICES.map((service, i) => (
             <Reveal key={service.title} delay={i * 80}>
               <div className="card-light group h-full rounded-2xl p-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-maroon/10 text-maroon transition-colors group-hover:bg-maroon group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
                   <svg viewBox="0 0 24 24" className="h-6 w-6" fill="currentColor">
                     {service.icon}
                   </svg>

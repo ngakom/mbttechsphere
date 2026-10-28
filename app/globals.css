@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #1c2126;
-  --navy-panel: #262c33;
-  --navy-panel-light: #323a43;
-  --maroon: #5c1a41;
-  --maroon-light: #8c2f63;
-  --gold: #c2984a;
+  --navy: #151412;
+  --navy-panel: #201e1b;
+  --navy-panel-light: #2b2925;
+  --accent: #c8642f;
+  --accent-light: #e08a5c;
+  --gold: #eaac57;
   --white: #ffffff;
   --grey-light: #f7f5f2;
-  --text-grey: #d3cdd2;
-  --ink: #1c2126;
-  --slate: #58515b;
-  --hairline-light: rgba(28, 33, 38, 0.08);
-  --hairline-dark: rgba(211, 205, 210, 0.14);
+  --text-grey: #d6d0c8;
+  --ink: #151412;
+  --slate: #57534e;
+  --hairline-light: rgba(21, 20, 18, 0.08);
+  --hairline-dark: rgba(214, 208, 200, 0.14);
 }
 
 @theme inline {
   --color-navy: var(--navy);
   --color-navy-panel: var(--navy-panel);
   --color-navy-panel-light: var(--navy-panel-light);
-  --color-maroon: var(--maroon);
-  --color-maroon-light: var(--maroon-light);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
   --color-gold: var(--gold);
   --color-grey-light: var(--grey-light);
   --color-text-grey: var(--text-grey);
@@ -77,14 +77,14 @@ h4 {
 .card-light {
   background: var(--white);
   border: 1px solid var(--hairline-light);
-  box-shadow: 0 12px 32px rgba(28, 33, 38, 0.06);
+  box-shadow: 0 12px 32px rgba(21, 20, 18, 0.06);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .card-light:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 48px rgba(28, 33, 38, 0.12);
-  border-color: rgba(92, 26, 65, 0.25);
+  box-shadow: 0 24px 48px rgba(21, 20, 18, 0.12);
+  border-color: rgba(200,100,47, 0.25);
 }
 
 .card-dark {
@@ -95,7 +95,7 @@ h4 {
 
 .card-dark:hover {
   transform: translateY(-8px);
-  border-color: rgba(194, 152, 74, 0.4);
+  border-color: rgba(234, 172, 87, 0.4);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
 }
 

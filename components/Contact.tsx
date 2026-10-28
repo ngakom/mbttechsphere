@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative overflow-hidden bg-navy py-24 lg:py-32">
       <div className="glow-field">
-        <div className="glow-orb -left-20 bottom-0 h-96 w-96 bg-maroon/30" />
+        <div className="glow-orb -left-20 bottom-0 h-96 w-96 bg-accent/30" />
         <div className="glow-orb right-0 top-0 h-72 w-72 bg-gold/20" />
       </div>
 

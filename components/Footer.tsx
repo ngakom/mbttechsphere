@@ -37,21 +37,21 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 lg:flex-row lg:items-start lg:justify-between lg:px-10">
         <div className="max-w-sm">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white p-1">
+            <span className="flex h-10 items-center">
               <Image
                 src="/images/logo-mark.png"
-                alt="MM Digital Solutions logo"
-                width={64}
-                height={64}
-                className="h-full w-full object-contain"
+                alt="MBT TechSphere Solutions logo"
+                width={1160}
+                height={468}
+                className="h-full w-auto object-contain"
               />
             </span>
             <span className="font-heading text-lg font-bold text-white">
-              MM Digital <span className="text-gold">Solutions</span>
+              TechSphere <span className="text-gold">Solutions</span>
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-text-grey">
-            Helping businesses work smarter through digital transformation.
+            Digital solutions for a smarter tomorrow.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export default function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-text-grey transition-colors hover:bg-maroon hover:text-white"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-text-grey transition-colors hover:bg-accent hover:text-white"
                 >
                   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor">
                     {social.icon}
@@ -95,7 +95,7 @@ export default function Footer() {
 
       <div className="mx-auto mt-12 max-w-7xl border-t border-hairline-dark px-6 pt-6 lg:px-10">
         <p className="text-xs text-text-grey/60">
-          © {new Date().getFullYear()} MM Digital Solutions. All rights reserved.
+          © {new Date().getFullYear()} MBT TechSphere Solutions. All rights reserved.
         </p>
       </div>
     </footer>

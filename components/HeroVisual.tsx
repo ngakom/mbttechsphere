@@ -56,7 +56,7 @@ export default function HeroVisual() {
           {[38, 62, 45, 80, 55, 92, 68].map((h, i) => (
             <span
               key={i}
-              className="rise-bar flex-1 rounded-t-sm bg-gradient-to-t from-maroon to-gold"
+              className="rise-bar flex-1 rounded-t-sm bg-gradient-to-t from-accent to-gold"
               style={{ height: `${h}%`, animationDelay: `${i * 90}ms` }}
             />
           ))}
@@ -76,7 +76,7 @@ export default function HeroVisual() {
           <div className="h-2.5 w-full rounded-full bg-white/10" />
           <div className="h-2.5 w-4/5 rounded-full bg-white/10" />
           <div className="flex gap-2 pt-1">
-            <span className="h-6 w-6 rounded-md bg-maroon-light/80" />
+            <span className="h-6 w-6 rounded-md bg-accent-light/80" />
             <span className="h-6 w-6 rounded-md bg-white/10" />
             <span className="h-6 w-6 rounded-md bg-white/10" />
           </div>
@@ -100,7 +100,7 @@ export default function HeroVisual() {
 
       {/* AI / Copilot orb */}
       <div className="float-slower absolute bottom-[6%] right-[6%] flex w-[38%] flex-col items-center rounded-2xl border border-white/10 bg-white/[0.06] p-4 text-center shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
-        <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold to-maroon">
+        <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold to-accent">
           <span className="pulse-soft absolute inset-0 rounded-full bg-gold/40" />
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="relative">
             <path
@@ -115,7 +115,7 @@ export default function HeroVisual() {
       </div>
 
       {/* ambient glows */}
-      <div className="glow-orb -left-10 top-10 h-56 w-56 bg-maroon/40" />
+      <div className="glow-orb -left-10 top-10 h-56 w-56 bg-accent/40" />
       <div className="glow-orb bottom-0 right-0 h-64 w-64 bg-gold/30" />
     </div>
   );

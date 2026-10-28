@@ -69,7 +69,7 @@ export default function ContactForm() {
       <div className="sm:col-span-2 flex flex-wrap items-center gap-4">
         <button
           type="submit"
-          className="btn-lift rounded-full bg-maroon px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(92,26,65,0.45)] hover:bg-maroon-light"
+          className="btn-lift rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(200,100,47,0.45)] hover:bg-accent-light"
         >
           Book a Consultation
         </button>

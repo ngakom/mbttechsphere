@@ -45,7 +45,7 @@ function ProjectPreview({ kind }: { kind: string }) {
         {[45, 70, 55, 85, 60, 95].map((h, i) => (
           <span
             key={i}
-            className="flex-1 rounded-t-sm bg-gradient-to-t from-maroon to-gold"
+            className="flex-1 rounded-t-sm bg-gradient-to-t from-accent to-gold"
             style={{ height: `${h}%`, opacity: 0.9 }}
           />
         ))}
@@ -74,7 +74,7 @@ function ProjectPreview({ kind }: { kind: string }) {
         <span className="h-2.5 w-2/3 rounded-full bg-white/15" />
         <span className="h-2.5 w-full rounded-full bg-white/10" />
         <span className="h-2.5 w-5/6 rounded-full bg-white/10" />
-        <span className="mt-1 h-8 w-28 rounded-full bg-maroon/80" />
+        <span className="mt-1 h-8 w-28 rounded-full bg-accent/80" />
       </div>
     );
   }
@@ -116,7 +116,7 @@ export default function FeaturedProjects() {
     <section id="projects" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal className="mx-auto max-w-2xl text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest-sm text-maroon">
+          <span className="text-xs font-semibold uppercase tracking-widest-sm text-accent">
             Portfolio
           </span>
           <h2 className="font-heading mt-4 text-3xl font-bold text-ink sm:text-4xl">
@@ -134,7 +134,7 @@ export default function FeaturedProjects() {
               <div className="card-light group h-full overflow-hidden rounded-2xl">
                 <div className="relative h-40 overflow-hidden bg-navy">
                   <div className="glow-field">
-                    <div className="glow-orb -left-6 -top-6 h-40 w-40 bg-maroon/40" />
+                    <div className="glow-orb -left-6 -top-6 h-40 w-40 bg-accent/40" />
                   </div>
                   <div className="relative h-full transition-transform duration-500 group-hover:scale-105">
                     <ProjectPreview kind={project.preview} />
@@ -145,7 +145,7 @@ export default function FeaturedProjects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-maroon/10 px-3 py-1 text-[11px] font-semibold text-maroon"
+                        className="rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold text-accent"
                       >
                         {tag}
                       </span>
