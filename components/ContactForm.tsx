@@ -6,7 +6,8 @@ const CONTACT_EMAIL = "info@mbttechsphere.co.za";
 
 // Web3Forms delivers submissions to CONTACT_EMAIL. The access key is public by design.
 // Without a key the form falls back to opening the visitor's email app.
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+const WEB3FORMS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "24b3d1c0-4f37-4d97-bbf6-f474ee11406c";
 
 const fieldClass =
   "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-text-grey/50 outline-none transition-colors focus:border-gold";
