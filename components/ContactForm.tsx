@@ -4,28 +4,62 @@ import { useState, type FormEvent } from "react";
 
 const CONTACT_EMAIL = "info@mbttechsphere.co.za";
 
+// Web3Forms delivers submissions to CONTACT_EMAIL. The access key is public by design.
+// Without a key the form falls back to opening the visitor's email app.
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
 const fieldClass =
   "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-text-grey/50 outline-none transition-colors focus:border-gold";
 
-export default function ContactForm() {
-  const [sent, setSent] = useState(false);
+type Status = "idle" | "sending" | "sent" | "mailto" | "error";
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+export default function ContactForm() {
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const name = String(data.get("name") ?? "");
     const email = String(data.get("email") ?? "");
     const phone = String(data.get("phone") ?? "");
     const company = String(data.get("company") ?? "");
     const message = String(data.get("message") ?? "");
+    const subject = `Consultation request from ${name || "website visitor"}`;
 
-    const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\n${message}`;
-    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      `Consultation request from ${name || "website visitor"}`
-    )}&body=${encodeURIComponent(body)}`;
+    if (!WEB3FORMS_KEY) {
+      const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\n${message}`;
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      setStatus("mailto");
+      return;
+    }
 
-    window.location.href = mailto;
-    setSent(true);
+    setStatus("sending");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject,
+          from_name: "MBT TechSphere website",
+          replyto: email,
+          name,
+          email,
+          phone,
+          company,
+          message,
+        }),
+      });
+      const result = await res.json();
+      if (!res.ok || !result.success) throw new Error(result.message);
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -70,15 +104,24 @@ export default function ContactForm() {
       <div className="sm:col-span-2 flex flex-wrap items-center gap-4">
         <button
           type="submit"
-          className="btn-lift rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(200,100,47,0.45)] hover:bg-accent-light"
+          disabled={status === "sending"}
+          className="btn-lift rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_rgba(200,100,47,0.45)] hover:bg-accent-light disabled:cursor-wait disabled:opacity-70"
         >
-          Book a Consultation
+          {status === "sending" ? "Sending…" : "Book a Consultation"}
         </button>
-        {sent && (
-          <p className="text-sm text-gold">
-            Opening your email app with this message — hit send there to reach us.
-          </p>
-        )}
+        <p role="status" className="text-sm text-gold">
+          {status === "sent" && "Thank you! Your request has been sent — we'll be in touch within one business day."}
+          {status === "mailto" && "Opening your email app with this message — hit send there to reach us."}
+          {status === "error" && (
+            <>
+              Something went wrong sending your request. Please email us at{" "}
+              <a href={`mailto:${CONTACT_EMAIL}`} className="underline">
+                {CONTACT_EMAIL}
+              </a>
+              .
+            </>
+          )}
+        </p>
       </div>
     </form>
   );
