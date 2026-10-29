@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL } from "./sitemap";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -15,10 +16,23 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const description =
+  "MBT TechSphere Solutions helps organizations automate processes, build business applications, create insightful dashboards, and modernize digital workplaces using Microsoft Power Platform, SharePoint, Power BI and AI.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "MBT TechSphere Solutions | Intelligent Digital Solutions for Business",
-  description:
-    "MBT TechSphere Solutions helps organizations automate processes, build business applications, create insightful dashboards, and modernize digital workplaces using Microsoft Power Platform, SharePoint, Power BI and AI.",
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "MBT TechSphere Solutions",
+    title: "MBT TechSphere Solutions | Digital Solutions for a Smarter Tomorrow",
+    description,
+    url: "/",
+    locale: "en_ZA",
+    images: [{ url: "/images/logo-full.png", width: 1774, height: 887, alt: "MBT TechSphere Solutions" }],
+  },
 };
 
 export default function RootLayout({

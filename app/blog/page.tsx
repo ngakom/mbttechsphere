@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Insights | MBT TechSphere Solutions",
   description:
     "Practical guidance on Power Platform, SharePoint, Power BI and AI from the MBT TechSphere Solutions team.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogIndex() {
