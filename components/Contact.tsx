@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 const INFO = [
   {
     label: "Email",
-    value: "hello@mmdigitalsolutions.com",
+    value: "info@mbttechsphere.co.za",
     icon: (
       <path d="M3 6h18v12H3V6Zm0 0 9 7 9-7" strokeWidth="1.6" stroke="currentColor" fill="none" />
     ),

@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
-const CONTACT_EMAIL = "hello@mmdigitalsolutions.com";
+const CONTACT_EMAIL = "info@mbttechsphere.co.za";
 
 const fieldClass =
   "w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-text-grey/50 outline-none transition-colors focus:border-gold";
@@ -15,10 +15,11 @@ export default function ContactForm() {
     const data = new FormData(e.currentTarget);
     const name = String(data.get("name") ?? "");
     const email = String(data.get("email") ?? "");
+    const phone = String(data.get("phone") ?? "");
     const company = String(data.get("company") ?? "");
     const message = String(data.get("message") ?? "");
 
-    const body = `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\n${message}`;
+    const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\n\n${message}`;
     const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
       `Consultation request from ${name || "website visitor"}`
     )}&body=${encodeURIComponent(body)}`;
