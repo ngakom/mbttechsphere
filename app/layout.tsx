@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   title: "MBT TechSphere Solutions | Intelligent Digital Solutions for Business",
   description,
   alternates: { canonical: "/" },
+  verification: { google: "GpBGu96S95YXo6i7ae37tlsigszE6n4y-kmpJprQqUE" },
   openGraph: {
     type: "website",
     siteName: "MBT TechSphere Solutions",
