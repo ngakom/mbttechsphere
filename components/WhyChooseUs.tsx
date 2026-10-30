@@ -25,8 +25,9 @@ export default function WhyChooseUs() {
             Why Choose MBT TechSphere Solutions
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-grey">
-            A senior team that has shipped Power Platform, SharePoint and AI solutions across
-            regulated and high-stakes industries — and stays accountable long after go-live.
+            A senior team that builds modern websites, AI chatbots and Power Platform solutions for
+            small businesses and large organizations alike — and stays accountable long after
+            go-live.
           </p>
         </Reveal>
 

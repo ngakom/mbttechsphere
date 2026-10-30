@@ -2,8 +2,38 @@ import Reveal from "./Reveal";
 
 const SERVICES = [
   {
-    title: "Power Platform Development",
-    description: "Business apps built using Power Apps and Dataverse.",
+    title: "Website Design & Development",
+    description:
+      "Modern, fast, mobile-friendly websites for small businesses and large enterprises — designed to rank on Google and turn visitors into customers.",
+    icon: (
+      <>
+        <rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M2 9h20" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="5" cy="6.5" r="0.9" />
+        <circle cx="7.8" cy="6.5" r="0.9" />
+        <rect x="5" y="12" width="8" height="5" rx="1" />
+        <rect x="15" y="12" width="4" height="2" rx="0.5" />
+        <rect x="15" y="15" width="4" height="2" rx="0.5" />
+      </>
+    ),
+  },
+  {
+    title: "AI Chatbots",
+    description:
+      "Smart website chatbots that answer customer questions 24/7, capture leads and book appointments — trained on your own business content.",
+    icon: (
+      <>
+        <path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+        <circle cx="8" cy="10.5" r="1.3" fill="white" />
+        <circle cx="12" cy="10.5" r="1.3" fill="white" />
+        <circle cx="16" cy="10.5" r="1.3" fill="white" />
+      </>
+    ),
+  },
+  {
+    title: "Power Platform & Automation",
+    description:
+      "Business apps with Power Apps and Dataverse, and automated workflows with Power Automate and Copilot.",
     icon: (
       <path d="M13 2 5 14h6l-2 8 10-13h-7l1-7z" />
     ),
@@ -20,18 +50,6 @@ const SERVICES = [
     ),
   },
   {
-    title: "Power Automate",
-    description: "Automate repetitive business processes end to end.",
-    icon: (
-      <>
-        <circle cx="5" cy="12" r="2.5" />
-        <circle cx="19" cy="6" r="2.5" />
-        <circle cx="19" cy="18" r="2.5" />
-        <path d="M7.3 11 17 6.8M7.3 13 17 17.2" strokeWidth="1.6" stroke="currentColor" fill="none" />
-      </>
-    ),
-  },
-  {
     title: "Power BI",
     description: "Executive dashboards and analytics that drive decisions.",
     icon: (
@@ -43,13 +61,8 @@ const SERVICES = [
     ),
   },
   {
-    title: "AI & Copilot",
-    description: "AI-powered business solutions that work the way you do.",
-    icon: <path d="M12 2 14.2 9.8 22 12 14.2 14.2 12 22 9.8 14.2 2 12 9.8 9.8 12 2Z" />,
-  },
-  {
-    title: "Custom Development",
-    description: "React, Next.js, ASP.NET Core and API integrations.",
+    title: "Custom Web Apps & Integrations",
+    description: "Customer portals, booking systems and web apps in React, Next.js and ASP.NET Core, connected to the tools you already use.",
     icon: (
       <path
         d="M8.5 8 3.5 12l5 4M15.5 8l5 4-5 4M14 5l-4 14"
@@ -75,8 +88,8 @@ export default function Services() {
             Our Services
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            End-to-end delivery across the Microsoft ecosystem, paired with custom engineering
-            when off-the-shelf isn&apos;t enough.
+            Modern websites and AI chatbots for businesses of every size, backed by deep
+            Microsoft Power Platform expertise for the apps, automation and reporting behind them.
           </p>
         </Reveal>
 

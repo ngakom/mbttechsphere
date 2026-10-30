@@ -77,7 +77,8 @@ const icons: Record<string, (p: TechIconProps) => ReactElement> = {
   ),
 };
 
-const TECHS = Object.keys(icons);
+// Web stack leads, followed by the Microsoft ecosystem
+const TECHS = ["React", "Next.js", ...Object.keys(icons).filter((k) => k !== "React" && k !== "Next.js")];
 
 function TechBadge({ name }: { name: string }) {
   const Icon = icons[name];

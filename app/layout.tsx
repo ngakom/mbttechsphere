@@ -17,11 +17,11 @@ const inter = Inter({
 });
 
 const description =
-  "MBT TechSphere Solutions helps organizations automate processes, build business applications, create insightful dashboards, and modernize digital workplaces using Microsoft Power Platform, SharePoint, Power BI and AI.";
+  "MBT TechSphere Solutions designs and builds modern websites with AI chatbots for small businesses and large enterprises, plus business apps, automation and dashboards using Microsoft Power Platform, SharePoint and Power BI.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "MBT TechSphere Solutions | Intelligent Digital Solutions for Business",
+  title: "MBT TechSphere Solutions | Modern Websites, AI Chatbots & Power Platform",
   description,
   alternates: { canonical: "/" },
   verification: { google: "GpBGu96S95YXo6i7ae37tlsigszE6n4y-kmpJprQqUE" },

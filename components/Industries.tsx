@@ -49,8 +49,8 @@ export default function Industries() {
             Industries We Serve
           </h2>
           <p className="mt-4 text-base leading-relaxed text-text-grey">
-            Different sectors, different constraints — our solutions are shaped around the
-            regulatory and operational realities of each.
+            From local small businesses to large enterprises — our websites and solutions are
+            shaped around the customers, regulations and operational realities of each sector.
           </p>
         </Reveal>
 

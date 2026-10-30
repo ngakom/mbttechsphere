@@ -123,8 +123,8 @@ export default function FeaturedProjects() {
             Featured Projects
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            A sample of the platforms, dashboards and portals we&apos;ve delivered across the
-            Microsoft ecosystem.
+            A sample of the platforms, dashboards and portals we&apos;ve delivered for our
+            clients.
           </p>
         </Reveal>
 

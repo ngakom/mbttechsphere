@@ -46,24 +46,27 @@ export default function HeroVisual() {
 
       {/* Power BI style analytics panel */}
       <div className="float-slow absolute left-0 top-[8%] w-[58%] rounded-2xl border border-white/10 bg-white/[0.06] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
-        <div className="mb-3 flex items-center justify-between">
-          <span className="text-[11px] font-semibold uppercase tracking-widest-sm text-gold">
-            Power BI
+        <div className="mb-3 flex items-center gap-1.5">
+          <span className="h-2 w-2 rounded-full bg-white/20" />
+          <span className="h-2 w-2 rounded-full bg-white/20" />
+          <span className="h-2 w-2 rounded-full bg-white/20" />
+          <span className="ml-2 h-3 flex-1 rounded-full bg-white/10 px-2 text-[8px] leading-3 text-text-grey">
+            yourbusiness.co.za
           </span>
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
         </div>
-        <div className="flex h-20 items-end gap-2">
-          {[38, 62, 45, 80, 55, 92, 68].map((h, i) => (
-            <span
-              key={i}
-              className="rise-bar flex-1 rounded-t-sm bg-gradient-to-t from-accent to-gold"
-              style={{ height: `${h}%`, animationDelay: `${i * 90}ms` }}
-            />
+        <div className="rounded-lg bg-gradient-to-br from-accent/60 to-gold/40 p-3">
+          <div className="h-2 w-3/4 rounded-full bg-white/80" />
+          <div className="mt-1.5 h-2 w-1/2 rounded-full bg-white/50" />
+          <div className="mt-3 h-4 w-16 rounded-full bg-white/90" />
+        </div>
+        <div className="mt-2 grid grid-cols-3 gap-2">
+          {[0, 1, 2].map((i) => (
+            <span key={i} className="h-8 rounded-md bg-white/10" />
           ))}
         </div>
         <div className="mt-3 flex items-center justify-between text-[11px] text-text-grey">
-          <span>Revenue trend</span>
-          <span className="font-semibold text-gold">+24.6%</span>
+          <span className="font-semibold uppercase tracking-widest-sm text-gold">Website</span>
+          <span>Mobile-ready</span>
         </div>
       </div>
 
@@ -98,20 +101,27 @@ export default function HeroVisual() {
         </div>
       </div>
 
-      {/* AI / Copilot orb */}
-      <div className="float-slower absolute bottom-[6%] right-[6%] flex w-[38%] flex-col items-center rounded-2xl border border-white/10 bg-white/[0.06] p-4 text-center shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
-        <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-gold to-accent">
-          <span className="pulse-soft absolute inset-0 rounded-full bg-gold/40" />
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="relative">
-            <path
-              d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z"
-              fill="white"
-            />
-          </svg>
+      {/* AI chatbot */}
+      <div className="float-slower absolute bottom-[6%] right-[4%] w-[44%] rounded-2xl border border-white/10 bg-white/[0.06] p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+        <div className="flex items-center gap-2">
+          <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-gold to-accent">
+            <span className="pulse-soft absolute inset-0 rounded-full bg-gold/40" />
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="relative">
+              <path d="M12 2 L14 9 L21 11 L14 13 L12 20 L10 13 L3 11 L10 9 Z" fill="white" />
+            </svg>
+          </span>
+          <span className="text-[11px] font-semibold uppercase tracking-widest-sm text-gold">
+            AI Chatbot
+          </span>
         </div>
-        <span className="mt-2 text-[11px] font-semibold uppercase tracking-widest-sm text-gold">
-          AI &amp; Copilot
-        </span>
+        <div className="mt-3 space-y-1.5 text-[10px] leading-snug">
+          <p className="ml-auto w-fit max-w-[85%] rounded-xl rounded-br-sm bg-accent/80 px-2.5 py-1.5 text-white">
+            Are you open on Saturday?
+          </p>
+          <p className="w-fit max-w-[90%] rounded-xl rounded-bl-sm bg-white/10 px-2.5 py-1.5 text-text-grey">
+            Yes, 9am–1pm! Want me to book you in?
+          </p>
+        </div>
       </div>
 
       {/* ambient glows */}

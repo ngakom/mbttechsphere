@@ -99,7 +99,7 @@ export default function ContactForm() {
           required
           rows={5}
           className={`${fieldClass} resize-none`}
-          placeholder="Tell us about the process, app or dashboard you need."
+          placeholder="Tell us about the website, chatbot, app or dashboard you need."
         />
       </div>
       <div className="sm:col-span-2 flex flex-wrap items-center gap-4">

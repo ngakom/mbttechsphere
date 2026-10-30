@@ -23,18 +23,18 @@ export default function Hero() {
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest-sm text-gold">
-            Microsoft Power Platform Partner
+            Websites · AI Chatbots · Microsoft Power Platform
           </span>
           <h1 className="font-heading mt-6 text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-[3.4rem]">
-            Transforming Businesses Through{" "}
+            Modern Websites &amp; AI Chatbots{" "}
             <span className="bg-gradient-to-r from-gold to-accent-light bg-clip-text text-transparent">
-              Intelligent Digital Solutions
+              for Businesses of Every Size
             </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-text-grey">
-            We help organizations automate processes, build business applications, create
-            insightful dashboards, and modernize digital workplaces using Microsoft Power
-            Platform, SharePoint, Power BI and AI.
+            From small businesses to large enterprises, we design and build fast, mobile-friendly
+            websites with built-in AI chatbots that answer customers and capture leads around the
+            clock — plus business apps, automation and dashboards on Microsoft Power Platform.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
