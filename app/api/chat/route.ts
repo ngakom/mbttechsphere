@@ -22,7 +22,7 @@ function rateLimited(ip: string): boolean {
 
 type ChatTurn = { role: "user" | "assistant"; content: string };
 
-function parseMessages(body: unknown): Anthropic.Beta.BetaMessageParam[] | null {
+function parseMessages(body: unknown): Anthropic.MessageParam[] | null {
   const raw = (body as { messages?: unknown })?.messages;
   if (!Array.isArray(raw) || raw.length === 0) return null;
   const turns = raw.slice(-MAX_HISTORY).filter(
@@ -54,18 +54,16 @@ export async function POST(req: Request) {
 
   try {
     const client = new Anthropic();
-    const response = await client.beta.messages.create({
-      model: "claude-opus-5-5",
+    const response = await client.messages.create({
+      model: "claude-haiku-5-5",
       max_tokens: 2000,
       output_config: { effort: "low" },
-      betas: ["server-side-fallback-2026-07-01"],
-      fallbacks: "default",
       system: [{ type: "text", text: SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
       messages,
     });
 
     const text = response.content
-      .filter((b): b is Anthropic.Beta.BetaTextBlock => b.type === "text")
+      .filter((b): b is Anthropic.TextBlock => b.type === "text")
       .map((b) => b.text)
       .join("")
       .trim();
