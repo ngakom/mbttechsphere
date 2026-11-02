@@ -33,7 +33,12 @@ export default async function BlogPost({
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  const related = posts.filter((p) => p.slug !== post.slug).slice(0, 2);
+  const others = posts.filter((p) => p.slug !== post.slug);
+  const related = [
+    ...others.filter((p) => p.category === post.category),
+    ...others.filter((p) => p.category !== post.category),
+  ].slice(0, 2);
+  const isWebPost = post.category === "Websites" || post.category === "AI Chatbots";
 
   return (
     <>
@@ -96,11 +101,12 @@ export default async function BlogPost({
 
           <div className="mt-14 rounded-2xl bg-grey-light p-8 text-center">
             <p className="font-heading text-lg font-bold text-ink">
-              Have a similar problem to solve?
+              {isWebPost ? "Ready for a website that works for your business?" : "Have a similar problem to solve?"}
             </p>
             <p className="mt-2 text-sm text-slate">
-              Tell us what&apos;s slowing your team down — we&apos;ll tell you honestly whether
-              it&apos;s worth automating.
+              {isWebPost
+                ? "Tell us about your business — we'll recommend the right package and give you a full breakdown of the costs upfront."
+                : "Tell us what's slowing your team down — we'll tell you honestly whether it's worth automating."}
             </p>
             <Link
               href="/#contact"

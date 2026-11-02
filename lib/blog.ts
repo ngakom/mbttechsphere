@@ -15,6 +15,256 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: "flyers-and-social-media-are-not-enough-why-your-business-needs-a-website",
+    title: "Only on Flyers and Social Media? Why Your Business Still Needs a Website",
+    excerpt:
+      "Flyers get thrown away and social media posts disappear from feeds. If that's all your business relies on, here's what you're missing out on.",
+    category: "Websites",
+    date: "2026-10-28",
+    readTime: "5 min read",
+    content: [
+      {
+        type: "p",
+        text: "Flyers, WhatsApp statuses, Facebook and Instagram are great for getting attention — and many small businesses grow on them alone. But if they are the only places a customer can find you, you're building your business on ground you don't own. A website doesn't replace them; it gives all of them somewhere to send people.",
+      },
+      {
+        type: "h3",
+        text: "1. Flyers get thrown away, and posts get buried",
+      },
+      {
+        type: "p",
+        text: "A flyer is read once and lost. A social media post is seen for a day or two before it sinks under newer posts. When a customer remembers you a month later and wants your prices or opening hours, they have to scroll through old posts or ask you again. A website keeps everything in one place, available any time of day.",
+      },
+      {
+        type: "h3",
+        text: "2. Customers search Google before they buy",
+      },
+      {
+        type: "p",
+        text: "When people need a service — a hair salon, a plumber, an accountant — many of them type it into Google first. Without a website, you're often invisible in those searches, and the business that does have one gets the call. A website, combined with a Google Business Profile, puts you in front of people who are already looking.",
+      },
+      {
+        type: "h3",
+        text: "3. A website builds trust",
+      },
+      {
+        type: "p",
+        text: "Anyone can open a social media page in five minutes. A professional website with your own domain name (like yourbusiness.co.za), your services, prices, photos of your work and clear contact details tells customers you're established and serious. It's often the difference between someone enquiring and someone moving on.",
+      },
+      {
+        type: "h3",
+        text: "4. You own it — the platforms don't",
+      },
+      {
+        type: "p",
+        text: "Social media platforms change their rules, limit how many people see your posts, and can suspend accounts without warning. Your website and domain belong to your business. Keep using social media — but point every post, flyer and status back to your website, where you control what customers see.",
+      },
+      {
+        type: "h3",
+        text: "5. It answers questions while you're busy working",
+      },
+      {
+        type: "p",
+        text: "How much does it cost? Where are you? Are you open on Sunday? Do I need to book? Answering the same questions on WhatsApp all day takes time away from your actual work. A website answers them for you — and with online booking or an AI chatbot, it can even take the enquiry for you.",
+      },
+      {
+        type: "h3",
+        text: "Signs it's time for a website",
+      },
+      {
+        type: "ul",
+        items: [
+          "Customers keep asking for your prices, address or hours on WhatsApp.",
+          "You print flyers regularly but can't tell how many people they reach.",
+          "People find your competitors on Google, but not you.",
+          "Your photos and reviews are scattered across several social media pages.",
+          "You want to look as professional as the bigger businesses in your area.",
+        ],
+      },
+      {
+        type: "p",
+        text: "You don't need a big budget to start. A simple, mobile-friendly starter website with your services, prices, photos and contact details is often enough to make a real difference — and it can grow with your business.",
+      },
+    ],
+  },
+  {
+    slug: "what-an-ai-chatbot-can-do-for-your-business-website",
+    title: "What an AI Chatbot Can Do for Your Business Website",
+    excerpt:
+      "Your customers have questions at 10pm and on Sundays. An AI chatbot on your website can answer them instantly — here's what it's good for.",
+    category: "AI Chatbots",
+    date: "2026-10-14",
+    readTime: "5 min read",
+    content: [
+      {
+        type: "p",
+        text: "An AI chatbot is a small chat window on your website that answers visitors' questions in plain language, any time of day. A few years ago this was only affordable for large companies. Today, a well-built chatbot can be added to a small business website at a modest cost — and it can save hours of repetitive messages every week.",
+      },
+      {
+        type: "h3",
+        text: "It answers the questions you get every day",
+      },
+      {
+        type: "p",
+        text: "Prices, opening hours, location, services, how to book, what to bring — most customer questions are the same handful, asked over and over. A chatbot trained on your business information answers them instantly and consistently, even when you're with a client or closed for the night.",
+      },
+      {
+        type: "h3",
+        text: "It keeps visitors on your website",
+      },
+      {
+        type: "p",
+        text: "When a visitor can't find an answer quickly, they leave — often to a competitor. A chatbot gives them an answer in seconds and can guide them to the next step: the booking page, your price list or your WhatsApp number.",
+      },
+      {
+        type: "h3",
+        text: "It works for every kind of business",
+      },
+      {
+        type: "ul",
+        items: [
+          "Salons and beauty businesses: prices, styles, hours and booking.",
+          "Professional services: what you offer, documents needed, how to get started.",
+          "Retail and food: products, delivery areas, specials and order process.",
+          "Schools and training: courses, fees, registration dates and requirements.",
+        ],
+      },
+      {
+        type: "h3",
+        text: "What a chatbot shouldn't do",
+      },
+      {
+        type: "p",
+        text: "A good chatbot knows its limits. It should only answer from your business information, never make up prices or promises, and hand customers over to a real person — by phone, email or WhatsApp — for anything it can't handle. That's how we build ours.",
+      },
+      {
+        type: "h3",
+        text: "What it costs to run",
+      },
+      {
+        type: "p",
+        text: "Modern AI chatbots are charged by usage, so a small business with a modest number of conversations typically pays very little each month. We set spending limits so there are no surprises, and the chatbot can fall back to ready-made answers if the AI service is ever unavailable.",
+      },
+    ],
+  },
+  {
+    slug: "what-a-website-really-costs-domain-hosting-and-design",
+    title: "What a Website Really Costs: Domain, Hosting and Design Explained",
+    excerpt:
+      "Design, domain name, hosting, email — it's easy to be confused by what you're actually paying for. Here's a plain-language breakdown.",
+    category: "Websites",
+    date: "2026-09-30",
+    readTime: "6 min read",
+    content: [
+      {
+        type: "p",
+        text: "Many business owners are put off by websites because they're not sure what they'll end up paying. The good news is that a website's costs fall into a few simple parts. Once you know what each one is, it's much easier to compare quotes and budget properly.",
+      },
+      {
+        type: "h3",
+        text: "1. Design and build (once-off)",
+      },
+      {
+        type: "p",
+        text: "This is the work of planning, designing and building your website — the pages, layout, photos, text and features like booking forms or a chatbot. It's usually a once-off fee that depends on the number of pages and the features you need. A simple starter site costs far less than a site with online booking, AI features or a custom system behind it.",
+      },
+      {
+        type: "h3",
+        text: "2. Domain name (yearly)",
+      },
+      {
+        type: "p",
+        text: "Your domain is your address on the internet, such as yourbusiness.co.za. It's registered in your business's name and renewed every year. A .co.za domain is one of the most affordable options and tells customers you're a South African business.",
+      },
+      {
+        type: "h3",
+        text: "3. Hosting (monthly)",
+      },
+      {
+        type: "p",
+        text: "Hosting is the service that keeps your website online, fast and secure, 24 hours a day. It's usually a small monthly fee. Good hosting includes a security certificate (the padlock in the browser), regular backups and monitoring.",
+      },
+      {
+        type: "h3",
+        text: "4. Optional extras",
+      },
+      {
+        type: "ul",
+        items: [
+          "Business email addresses, such as info@yourbusiness.co.za.",
+          "An AI chatbot, which has a small usage-based running cost.",
+          "Monthly updates — new prices, photos, specials or pages.",
+          "Google Business Profile setup so you appear on Google Maps.",
+        ],
+      },
+      {
+        type: "h3",
+        text: "Questions to ask before you sign",
+      },
+      {
+        type: "ul",
+        items: [
+          "Is the domain registered in my business's name?",
+          "What exactly is included in the monthly fee?",
+          "How many changes are included after the site goes live?",
+          "Will the website work well on mobile phones?",
+          "What happens to my website and domain if I stop paying or move to another provider?",
+        ],
+      },
+      {
+        type: "p",
+        text: "At MBT TechSphere Solutions we give every client a full breakdown of once-off and monthly costs upfront — no hidden fees. Get in touch for a quote tailored to your business.",
+      },
+    ],
+  },
+  {
+    slug: "online-booking-turns-website-visitors-into-customers",
+    title: "Online Booking: Turning Website Visitors into Paying Customers",
+    excerpt:
+      "Every extra step between \"I want this\" and \"I've booked\" loses customers. Here's how online booking on your website closes that gap.",
+    category: "Websites",
+    date: "2026-09-16",
+    readTime: "4 min read",
+    content: [
+      {
+        type: "p",
+        text: "For service businesses — salons, clinics, consultants, tutors, mechanics — the moment a customer decides to book is precious. If they have to send a message, wait for a reply, and go back and forth about dates and prices, some of them give up. Online booking captures them while they're ready.",
+      },
+      {
+        type: "h3",
+        text: "Customers book when it suits them",
+      },
+      {
+        type: "p",
+        text: "Many people plan their week late at night or over the weekend. A booking form on your website lets them choose a service and a preferred date at any hour, without waiting for you to reply.",
+      },
+      {
+        type: "h3",
+        text: "You get all the details in one message",
+      },
+      {
+        type: "p",
+        text: "A good booking form asks for exactly what you need — name, phone number, service, date and any notes — and sends it to you in one tidy message, by email or straight to WhatsApp. No more piecing together details from five separate messages.",
+      },
+      {
+        type: "h3",
+        text: "Show the work, then let them book it",
+      },
+      {
+        type: "p",
+        text: "Photos sell services. Linking your gallery to your booking form means a customer can tap a photo of a style or result they love and book that exact service, with the photo attached for you to see.",
+      },
+      {
+        type: "h3",
+        text: "It doesn't have to be complicated",
+      },
+      {
+        type: "p",
+        text: "You don't need expensive booking software to start. A simple booking request that arrives on your WhatsApp works well for many small businesses, and it can grow into a full calendar system later if you need one.",
+      },
+    ],
+  },
+  {
     slug: "signs-your-business-process-needs-power-automate",
     title: "5 Signs Your Business Process Needs Power Automate",
     excerpt:

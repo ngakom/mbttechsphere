@@ -6,7 +6,7 @@ import { posts } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Insights | MBT TechSphere Solutions",
   description:
-    "Practical guidance on Power Platform, SharePoint, Power BI and AI from the MBT TechSphere Solutions team.",
+    "Practical guidance on websites, AI chatbots, Power Platform, SharePoint and Power BI from the MBT TechSphere Solutions team.",
   alternates: { canonical: "/blog" },
 };
 
@@ -24,11 +24,11 @@ export default function BlogIndex() {
               Insights
             </span>
             <h1 className="font-heading mt-4 text-4xl font-bold text-white sm:text-5xl">
-              Ideas on Power Platform, Data &amp; AI
+              Ideas on Websites, AI &amp; Power Platform
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-text-grey">
-              Practical write-ups from the team building automations, apps and dashboards — no
-              vendor fluff, just what we&apos;ve learned shipping this stuff.
+              Practical write-ups from the team building websites, chatbots, automations, apps and
+              dashboards — no vendor fluff, just what we&apos;ve learned shipping this stuff.
             </p>
           </Reveal>
         </div>
