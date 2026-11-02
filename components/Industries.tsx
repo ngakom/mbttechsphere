@@ -24,6 +24,16 @@ const INDUSTRIES = [
     ),
   },
   {
+    name: "Beauty & Salons",
+    icon: (
+      <>
+        <circle cx="6" cy="6" r="3" />
+        <circle cx="6" cy="18" r="3" />
+        <path d="M8.12 8.12 12 12M20 4 8.12 15.88M14.8 14.8 20 20" />
+      </>
+    ),
+  },
+  {
     name: "Mining",
     icon: (
       <path d="M3 21h18M5 21 9 9l3 4 3-6 4 14M9 9l-1.5-3M12 13l-2-3" />
@@ -54,9 +64,14 @@ export default function Industries() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+        {/* Flex-wrap (not grid) so an odd last row stays centred. */}
+        <div className="mt-16 flex flex-wrap justify-center gap-5">
           {INDUSTRIES.map((industry, i) => (
-            <Reveal key={industry.name} delay={i * 70}>
+            <Reveal
+              key={industry.name}
+              delay={i * 70}
+              className="w-[calc(50%-0.625rem)] sm:w-[calc((100%-2.5rem)/3)] lg:w-[calc((100%-7.5rem)/7)]"
+            >
               <div className="card-dark flex h-full flex-col items-center gap-4 rounded-2xl px-4 py-9 text-center">
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
                   <svg
