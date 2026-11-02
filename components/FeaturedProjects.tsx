@@ -1,4 +1,32 @@
+import Image from "next/image";
 import Reveal from "./Reveal";
+
+const WEBSITES = [
+  {
+    title: "BeeLeeGeen Kiddies Hair Salon",
+    url: "https://www.beeleegeen.co.za",
+    image: "/images/work/beeleegeen.jpg",
+    tags: ["Online Booking", "AI Chatbot", "Gallery"],
+    description:
+      "A playful salon website with price lists, a bookable style gallery and WhatsApp booking requests that go straight to the owner.",
+  },
+  {
+    title: "MYOWNXTANT (MOX)",
+    url: "https://myownxtant-website.vercel.app",
+    image: "/images/work/myownxtant.jpg",
+    tags: ["Corporate Website", "Vacancies", "CV Submission"],
+    description:
+      "A professional services website for recruitment, medical billing, IT support and procurement, with vacancies and CV submission.",
+  },
+  {
+    title: "Luxe & Glow Beauty Studio",
+    url: "https://luxe-glow-website.vercel.app",
+    image: "/images/work/luxe-glow.jpg",
+    tags: ["Demo Site", "Online Booking", "AI Chatbot"],
+    description:
+      "A showcase beauty salon website with services and pricing, a gallery, online booking and an AI chatbot — ready to brand for your business.",
+  },
+];
 
 const PROJECTS = [
   {
@@ -123,12 +151,59 @@ export default function FeaturedProjects() {
             Featured Projects
           </h2>
           <p className="mt-4 text-base leading-relaxed text-slate">
-            A sample of the platforms, dashboards and portals we&apos;ve delivered for our
-            clients.
+            A sample of the websites, platforms, dashboards and portals we&apos;ve delivered for
+            our clients.
           </p>
         </Reveal>
 
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal>
+          <h3 className="font-heading mt-16 text-xl font-bold text-ink">Websites we&apos;ve built</h3>
+          <p className="mt-1 text-sm text-slate">Click a website to visit it live.</p>
+        </Reveal>
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {WEBSITES.map((site, i) => (
+            <Reveal key={site.title} delay={i * 80}>
+              <a
+                href={site.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card-light group flex h-full flex-col overflow-hidden rounded-2xl"
+              >
+                <div className="relative aspect-[8/5] overflow-hidden border-b border-ink/5 bg-navy">
+                  <Image
+                    src={site.image}
+                    alt={`${site.title} website home page`}
+                    fill
+                    sizes="(min-width: 1024px) 24rem, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <div className="flex flex-wrap gap-2">
+                    {site.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold text-accent"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h4 className="font-heading mt-4 text-lg font-bold text-ink">{site.title}</h4>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate">{site.description}</p>
+                  <span className="mt-5 text-sm font-semibold text-accent">
+                    Visit website <span aria-hidden="true">↗</span>
+                  </span>
+                </div>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal>
+          <h3 className="font-heading mt-16 text-xl font-bold text-ink">Business systems</h3>
+        </Reveal>
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project, i) => (
             <Reveal key={project.title} delay={i * 80}>
               <div className="card-light group h-full overflow-hidden rounded-2xl">
