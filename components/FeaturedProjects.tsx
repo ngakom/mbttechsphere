@@ -26,6 +26,14 @@ const WEBSITES = [
     description:
       "A showcase beauty salon website with services and pricing, a gallery, online booking and an AI chatbot — ready to brand for your business.",
   },
+  {
+    title: "Marula Bloom Online Shop",
+    url: "https://marula-bloom-shop.vercel.app",
+    image: "/images/work/marula-bloom.jpg",
+    tags: ["Demo Site", "Online Shop", "Owner Dashboard"],
+    description:
+      "A showcase online shop with customer accounts, sale prices, delivery options, secure checkout and a dashboard where the owner updates products and prices.",
+  },
 ];
 
 const PROJECTS = [
@@ -160,7 +168,7 @@ export default function FeaturedProjects() {
           <h3 className="font-heading mt-16 text-xl font-bold text-ink">Websites we&apos;ve built</h3>
           <p className="mt-1 text-sm text-slate">Click a website to visit it live.</p>
         </Reveal>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {WEBSITES.map((site, i) => (
             <Reveal key={site.title} delay={i * 80}>
               <a
@@ -174,7 +182,7 @@ export default function FeaturedProjects() {
                     src={site.image}
                     alt={`${site.title} website home page`}
                     fill
-                    sizes="(min-width: 1024px) 24rem, (min-width: 640px) 50vw, 100vw"
+                    sizes="(min-width: 1024px) 36rem, (min-width: 640px) 50vw, 100vw"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
