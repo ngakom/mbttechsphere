@@ -3,6 +3,14 @@ import Reveal from "./Reveal";
 
 const WEBSITES = [
   {
+    title: "Collaborative Blending Solutions",
+    url: "https://cblending.co.za",
+    image: "/images/work/cblending.jpg",
+    tags: ["Corporate Website", "AI Chatbot", "Enquiry Form"],
+    description:
+      "A corporate website for an FSSC 22000 certified food blending manufacturer, built to their brand guidelines, with an AI chatbot that answers questions about services and certifications.",
+  },
+  {
     title: "BeeLeeGeen Kiddies Hair Salon",
     url: "https://www.beeleegeen.co.za",
     image: "/images/work/beeleegeen.jpg",
@@ -168,7 +176,7 @@ export default function FeaturedProjects() {
           <h3 className="font-heading mt-16 text-xl font-bold text-ink">Websites we&apos;ve built</h3>
           <p className="mt-1 text-sm text-slate">Click a website to visit it live.</p>
         </Reveal>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {WEBSITES.map((site, i) => (
             <Reveal key={site.title} delay={i * 80}>
               <a
@@ -182,24 +190,24 @@ export default function FeaturedProjects() {
                     src={site.image}
                     alt={`${site.title} website home page`}
                     fill
-                    sizes="(min-width: 1024px) 36rem, (min-width: 640px) 50vw, 100vw"
+                    sizes="(min-width: 1024px) 24rem, (min-width: 640px) 50vw, 100vw"
                     className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-7">
-                  <div className="flex flex-wrap gap-2">
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="flex flex-wrap gap-1.5">
                     {site.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full bg-accent/10 px-3 py-1 text-[11px] font-semibold text-accent"
+                        className="rounded-full bg-accent/10 px-2.5 py-0.5 text-[10px] font-semibold text-accent"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <h4 className="font-heading mt-4 text-lg font-bold text-ink">{site.title}</h4>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate">{site.description}</p>
-                  <span className="mt-5 text-sm font-semibold text-accent">
+                  <h4 className="font-heading mt-3 text-base font-bold text-ink">{site.title}</h4>
+                  <p className="mt-1.5 flex-1 text-[13px] leading-relaxed text-slate">{site.description}</p>
+                  <span className="mt-4 text-sm font-semibold text-accent">
                     Visit website <span aria-hidden="true">↗</span>
                   </span>
                 </div>
